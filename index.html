@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Troca de Cores</title>
+</head>
+<body>
+    <main>
+        <h1>Troca de Cores</h1>
+        <!-- Botões para trocar a cor do fundo -->
+        <button onclick="trocaCor('red')">Vermelho</button>
+        <button onclick="trocaCor('green')">Verde</button>
+        <button onclick="trocaCor('blue')">Azul</button>
+        <button onclick="trocaCor('yellow')">Amarelo</button>
+        <button onclick="corAleatoria()">Cor Aleatória</button>
+        <br>
+        <!-- Input para inserir cor personalizada -->
+        <input type="text" placeholder="Nome da Cor ou #HEX" class="input-cor">
+        <button onclick="aplicaCorPersonalizada()">Aplicar Cor</button>
+        <!-- Input para selecionar cor via color picker -->
+        <input type="color" onchange="trocaCor(this.value)">
+        <br>
+        <!-- Input para selecionar imagem de fundo -->
+        <label for="image">Escolher Imagem</label>
+        <input type="file" id="image" accept="image/*" onchange="EscolherImagem(this.files[0])">
+    </main>
+</body>
+<script src="scripts.js"></script>
+</html>
